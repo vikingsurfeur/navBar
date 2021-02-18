@@ -1,0 +1,11 @@
+{
+  "name": "navbar_redemption",
+  "version": "1.0.0",
+  "description": "New navBar with transform(3D) effect skills",
+  "main": "app.js",
+  "scripts": {
+    "sass": "sass --watch ./partials/main_style.scss:./style/style.css"
+  },
+  "author": "David Bouscarle",
+  "license": "ISC"
+}

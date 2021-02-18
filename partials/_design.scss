@@ -1,0 +1,14 @@
+// IMPORT ADOBE FONT
+@import url("https://use.typekit.net/uhd0mdv.css");
+$futura: futura-pt, sans-serif;
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $futura;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+}
