@@ -67,6 +67,64 @@ table {
   border-spacing: 0;
 }
 
+.header__nav__burger,
+.menu__responsive__toggle {
+  width: 4rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.header__nav__burger__bar,
+.menu__responsive__toggle__bar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.header__nav__burger {
+  grid-column: start--nav/end--nav;
+  justify-self: flex-end;
+  align-self: center;
+  position: relative;
+}
+@media screen and (min-width: 992px) {
+  .header__nav__burger {
+    display: none;
+  }
+}
+.header__nav__burger .bar--1 {
+  top: 0;
+}
+.header__nav__burger .bar--2 {
+  top: calc(50% - 2px);
+}
+.header__nav__burger .bar--3 {
+  bottom: 0;
+}
+
+.menu__responsive__toggle {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+.menu__responsive__toggle__bar {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: black;
+}
+.menu__responsive__toggle .bar--1 {
+  top: calc(50% - 2px);
+  transform: rotate(45deg);
+}
+.menu__responsive__toggle .bar--2 {
+  bottom: calc(50% - 2px);
+  transform: rotate(-45deg);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -105,36 +163,6 @@ body {
 .header__nav__list__item {
   margin-left: 4rem;
 }
-.header__nav__burger {
-  grid-column: start--nav/end--nav;
-  justify-self: flex-end;
-  align-self: center;
-  width: 4rem;
-  height: 3rem;
-  position: relative;
-  cursor: pointer;
-}
-@media screen and (min-width: 992px) {
-  .header__nav__burger {
-    display: none;
-  }
-}
-.header__nav__burger__bar {
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  border-radius: 5px;
-  background-color: black;
-}
-.header__nav__burger .bar--1 {
-  top: 0;
-}
-.header__nav__burger .bar--2 {
-  top: calc(50% - 2px);
-}
-.header__nav__burger .bar--3 {
-  bottom: 0;
-}
 
 .menu__responsive {
   min-height: 100vh;
@@ -152,29 +180,6 @@ body {
 }
 .menu__responsive__open {
   transform: translate3d(0, 0, 0);
-}
-.menu__responsive__toggle {
-  width: 4rem;
-  height: 3rem;
-  position: absolute;
-  top: 5%;
-  right: 5%;
-  cursor: pointer;
-}
-.menu__responsive__toggle__bar {
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  border-radius: 5px;
-  background-color: black;
-}
-.menu__responsive__toggle .bar--1 {
-  top: calc(50% - 2px);
-  transform: rotate(45deg);
-}
-.menu__responsive__toggle .bar--2 {
-  bottom: calc(50% - 2px);
-  transform: rotate(-45deg);
 }
 .menu__responsive__list {
   height: 100%;
