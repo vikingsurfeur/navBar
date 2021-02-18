@@ -10,15 +10,15 @@
         grid-template-columns:
 
         [start]
-        5vw
+        5%
         [start--logo]
-        100px
+        64px
         [spacing]
-        5vw
+        5%
         [start--nav]
         1fr
         [end--nav]
-        5vw
+        5%
         [end];
 
         &__logo {
@@ -33,7 +33,6 @@
                 display: flex;
                 display: -webkit-flex;
                 display: -ms-flexbox;
-                display: -webkit-box;
                 justify-content: flex-end;
                 align-items: center;
             }
@@ -49,8 +48,8 @@
             align-self: center;
             width: 4rem;
             height: 3rem;
-            display: block;
             position: relative;
+            cursor: pointer;
 
             @media screen and (min-width: 992px) {
                 display: none;
@@ -75,6 +74,63 @@
             .bar--3 {
                 bottom: 0;
             }
+        }
+    }
+}
+
+.menu__responsive {
+    min-height: 100vh;
+    min-width: 100vw;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0, -100vh, 0);
+    transition: transform 500ms ease;
+    background-color: white;
+
+    &__open {
+        transform: translate3d(0, 0, 0);
+    }
+
+    &__toggle {
+        width: 4rem;
+        height: 3rem;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        cursor: pointer;
+
+        &__bar {
+            width: 100%;
+            height: 4px;
+            position: absolute;
+            border-radius: 5px;
+            background-color: black;
+        }
+
+        .bar--1 {
+            top: calc(50% - 2px);
+            transform: rotate(45deg);
+        }
+
+        .bar--2 {
+            bottom: calc(50% - 2px);
+            transform: rotate(-45deg);
+        }
+    }
+
+    &__list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__item {
+            margin: 4rem 0;
         }
     }
 }
