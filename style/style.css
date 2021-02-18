@@ -67,6 +67,8 @@ table {
   border-spacing: 0;
 }
 
+/*  COMPONENT
+    SECTION */
 .header__nav__burger,
 .menu__responsive__toggle {
   width: 4rem;
@@ -125,15 +127,16 @@ table {
   transform: rotate(-45deg);
 }
 
+/*  DESIGN
+    SECTION */
 html {
   font-size: 62.5%;
 }
 
 body {
   font-family: futura-pt, sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-  color: black;
+  font-size: 2.5rem;
+  color: #121212;
 }
 
 .header {
@@ -172,23 +175,40 @@ body {
   top: 0;
   left: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transform: translate3d(0, -100vh, 0);
   transition: transform 500ms ease;
   background-color: white;
 }
+@media screen and (min-width: 992px) {
+  .menu__responsive {
+    display: none;
+  }
+}
 .menu__responsive__open {
   transform: translate3d(0, 0, 0);
 }
-.menu__responsive__list {
+.menu__responsive__list__menu {
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.menu__responsive__list__item {
+.menu__responsive__list__menu__item {
   margin: 4rem 0;
+}
+.menu__responsive__list__social {
+  margin-top: 15rem;
+  display: flex;
+  align-items: baseline;
+}
+.menu__responsive__list__social__item {
+  margin: 0 5rem;
+}
+.menu__responsive__list__social__item__logo {
+  max-width: 32px;
 }
 
 /*# sourceMappingURL=style.css.map */

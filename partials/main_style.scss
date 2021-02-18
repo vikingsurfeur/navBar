@@ -57,17 +57,22 @@
     top: 0;
     left: 0;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transform: translate3d(0, -100vh, 0);
     transition: transform 500ms ease;
     background-color: white;
 
+    @media screen and (min-width: 992px) {
+        display: none;
+    }
+
     &__open {
         transform: translate3d(0, 0, 0);
     }
 
-    &__list {
+    &__list__menu {
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -75,6 +80,20 @@
 
         &__item {
             margin: 4rem 0;
+        }
+    }
+
+    &__list__social {
+        margin-top: 15rem;
+        display: flex;
+        align-items: baseline;
+
+        &__item {
+            margin: 0 5rem;
+
+            &__logo {
+                max-width: 32px;
+            }
         }
     }
 }
