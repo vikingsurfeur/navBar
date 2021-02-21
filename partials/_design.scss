@@ -9,12 +9,14 @@ $futura: futura-pt, sans-serif;
 // COLOR
 
 $black : #121212;
+$white: #fefefe;
 
 html {
     font-size: 62.5%;
 }
 
 body {
+    min-height: 200vh;
     font-family: $futura;
     font-size: 2.5rem;
     color: $black;

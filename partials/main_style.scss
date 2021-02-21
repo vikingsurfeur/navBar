@@ -1,13 +1,23 @@
 // IMPORT PARTIALS
 
 @import './reset';
-@import './component';
 @import './design';
+@import './component';
+
 
 // MAIN
 
 .header {
     padding: 2rem 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    &__turn__black {
+        color: $white;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
 
     &__nav {
         display: grid;
@@ -43,7 +53,26 @@
             }
 
             &__item {
-                margin-left: 4rem;
+                margin-left: 6rem;
+                position: relative;
+            }
+
+            &__item::before {
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: -20%;
+                left: 0;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: transform 250ms ease;
+                background-color: $black;
+            }
+
+            &__item:hover::before {
+                transform: scaleX(1);
+                transform-origin: left;
             }
         }
     }
@@ -62,7 +91,7 @@
     align-items: center;
     transform: translate3d(0, -100vh, 0);
     transition: transform 500ms ease;
-    background-color: white;
+    background-color: $white;
 
     @media screen and (min-width: 992px) {
         display: none;
