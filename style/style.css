@@ -104,7 +104,7 @@ body {
   align-self: center;
   position: relative;
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .header__nav__burger {
     display: none;
   }
@@ -162,7 +162,7 @@ body {
 .header__nav__list {
   display: none;
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .header__nav__list {
     grid-column: start--nav/end--nav;
     display: flex;
@@ -208,7 +208,7 @@ body {
   transition: transform 500ms ease;
   background-color: #fefefe;
 }
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 992px) {
   .menu__responsive {
     display: none;
   }
