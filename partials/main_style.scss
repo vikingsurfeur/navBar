@@ -65,8 +65,8 @@
                 bottom: -20%;
                 left: 0;
                 transform: scaleX(0);
-                transform-origin: left;
-                transition: transform 250ms ease;
+                transform-origin: right;
+                transition: transform 500ms ease;
                 background-color: $black;
             }
 
