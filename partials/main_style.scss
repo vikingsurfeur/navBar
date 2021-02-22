@@ -89,7 +89,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translate3d(0, -100vh, 0);
+    transform: translate3d(100vw, 0, 0);
     transition: transform 500ms ease;
     background-color: $white;
 
