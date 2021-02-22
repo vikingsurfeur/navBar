@@ -13,10 +13,12 @@
     top: 0;
     left: 0;
     right: 0;
+    transition: 250ms all;
 
     &__turn__black {
+        padding: 1.5rem 0;
         color: $white;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     &__nav {
@@ -74,11 +76,11 @@
                 transform: scaleX(1);
                 transform-origin: left;
             }
+
+            
         }
     }
 }
-
-
 
 .curtain, .menu__responsive {
     min-height: 100vh;

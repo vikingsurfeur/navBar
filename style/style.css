@@ -146,10 +146,12 @@ body {
   top: 0;
   left: 0;
   right: 0;
+  transition: 250ms all;
 }
 .header__turn__black {
+  padding: 1.5rem 0;
   color: #fefefe;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .header__nav {
   display: grid;
